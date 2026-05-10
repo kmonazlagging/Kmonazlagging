@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steins;Gate - Hero Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images7.alphacoders.com/345/thumb-1920-345052.jpg') no-repeat center/cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .audio-player {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+
+        .audio-player label {
+            color: #fff;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .audio-player iframe {
+            width: 300px;
+            height: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 40px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
+
+            .audio-player {
+                position: static;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .audio-player iframe {
+                width: 100%;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgMusic" autoplay loop preload="auto">
+        <source src="https://soundcloud.com/hinata-hideki-2/gate-of-steiner-steinsgate-0-ost-sasaki-eri" type="audio/mpeg">
+    </audio>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Steins;Gate</h1>
+            <div class="description">
+                Steins;Gate is a 2009 science fiction visual novel game developed by 5pb. and Nitroplus. It is the second game in the Science Adventure series, following Chaos;Head. The story follows a group of students as they discover and develop technology that gives them the means to change the past. The gameplay in Steins;Gate includes branching scenarios with courses of interaction.
+            </div>
+            <a href="https://store.steampowered.com/app/412830/STEINSGATE/" class="cta-button" target="_blank">Play it, it's awesome!</a>
+        </div>
+    </section>
+</body>
+</html>
